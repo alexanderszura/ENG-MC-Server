@@ -74,7 +74,7 @@ const config = {
             label: 'Tutorial',
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/alexanderszura/ENG-MC-Server',
             label: 'GitHub',
             position: 'right',
           },
