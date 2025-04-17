@@ -1,0 +1,9 @@
+{
+    "label": "Installation",
+    "position": 2,
+    "link": {
+      "type": "generated-index",
+      "description": "his guide describes how to set up a local Minecraft server on a desktop computer, configure automatic backups, and make it accessible over a LAN using static IP and port forwarding."
+    }
+  }
+  
