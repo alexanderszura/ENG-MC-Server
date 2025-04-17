@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.7.0">
 <title data-rh="true">Curriculum Connections | Minecraft Server Project</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://alexanderszura.github.io/ENG-MC-Server/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://alexanderszura.github.io/ENG-MC-Server/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://alexanderszura.github.io/ENG-MC-Server/docs/curriculum"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Curriculum Connections | Minecraft Server Project"><meta data-rh="true" name="description" content="This document outlines how the Minecraft Server Hosting and Networking Project addresses key expectations from the TEJ4M1 Grade 12 Computer Engineering curriculum."><meta data-rh="true" property="og:description" content="This document outlines how the Minecraft Server Hosting and Networking Project addresses key expectations from the TEJ4M1 Grade 12 Computer Engineering curriculum."><link data-rh="true" rel="icon" href="/ENG-MC-Server/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://alexanderszura.github.io/ENG-MC-Server/docs/curriculum"><link data-rh="true" rel="alternate" href="https://alexanderszura.github.io/ENG-MC-Server/docs/curriculum" hreflang="en"><link data-rh="true" rel="alternate" href="https://alexanderszura.github.io/ENG-MC-Server/docs/curriculum" hreflang="x-default"><link rel="stylesheet" href="/ENG-MC-Server/assets/css/styles.2ce171b8.css">
-<script src="/ENG-MC-Server/assets/js/runtime~main.e534bcee.js" defer="defer"></script>
+<script src="/ENG-MC-Server/assets/js/runtime~main.31c60064.js" defer="defer"></script>
 <script src="/ENG-MC-Server/assets/js/main.86d31d3c.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -13,16 +13,51 @@
 <hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="-a1---computer-hardware">✅ A1 - Computer Hardware<a href="#-a1---computer-hardware" class="hash-link" aria-label="Direct link to ✅ A1 - Computer Hardware" title="Direct link to ✅ A1 - Computer Hardware">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="-a11--internal-buses-and-system-communication">🔹 A1.1 – Internal Buses and System Communication<a href="#-a11--internal-buses-and-system-communication" class="hash-link" aria-label="Direct link to 🔹 A1.1 – Internal Buses and System Communication" title="Direct link to 🔹 A1.1 – Internal Buses and System Communication">​</a></h3>
+<p>Internal buses play a critical role in ensuring all parts of the computer can communicate effectively:</p>
 <ul>
-<li>The server’s CPU (6 cores @ 2.1 GHz) uses internal buses (e.g., data, address, control buses) to communicate between the processor, RAM, and storage.</li>
-<li>RAM running at 2400 MT/s benefits from a fast memory bus, which reduces latency when multiple players are connected to the Minecraft server.</li>
-<li>Efficient data transfer between the CPU, RAM, and SATA SSD improves game responsiveness, world loading, and backup performance.</li>
+<li>
+<p><strong>Data Bus:</strong> Transfers actual data between CPU, RAM, and storage. A wider data bus (like 64-bit) means more data can be moved at once. This affects Minecraft performance by allowing faster updates to the game state.</p>
+</li>
+<li>
+<p><strong>Address Bus:</strong> Sends memory addresses so the CPU knows where to read/write data. A server with a 64-bit address bus can use more memory—important for hosting multiple players and large worlds.</p>
+</li>
+<li>
+<p><strong>Control Bus:</strong> Carries control signals (like read/write commands). Keeps the timing and coordination of CPU and memory operations smooth, reducing lag during world saves or player movement.</p>
+</li>
+<li>
+<p><strong>CPU-RAM Bus (Memory Bus):</strong> The RAM in this server runs at 2400 MT/s, which supports fast chunk loading and entity tracking by enabling high-speed data transfers to/from memory.</p>
+</li>
+<li>
+<p><strong>Storage Bus (SATA):</strong> Connects the SSD to the motherboard. SATA III supports up to 6 Gb/s transfer speed—enough for solid performance during saves and backups.</p>
+</li>
 </ul>
+<p>These internal buses ensure the server can react in real time, which is essential for smooth multiplayer gameplay.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="-a12--storage-devices-for-server-needs">🔹 A1.2 – Storage Devices for Server Needs<a href="#-a12--storage-devices-for-server-needs" class="hash-link" aria-label="Direct link to 🔹 A1.2 – Storage Devices for Server Needs" title="Direct link to 🔹 A1.2 – Storage Devices for Server Needs">​</a></h3>
+<p>Selecting the right storage affects how well the server can handle saving/loading game data:</p>
 <ul>
-<li>The server uses a 256 GB <strong>SATA SSD</strong>, chosen for its speed and reliability over traditional HDDs.</li>
-<li>SSDs are essential for running Minecraft servers, reducing chunk loading times and enabling faster backups.</li>
-<li>The storage choice supports high read/write speeds necessary for hosting multiple players and handling frequent file access without lag.</li>
+<li>
+<p><strong>SSD (SATA, 256 GB):</strong></p>
+<ul>
+<li>Provides fast load times and quick access to world files.</li>
+<li>Large enough for moderate world sizes and multiple backups.</li>
+<li>More reliable and faster than HDDs, especially for I/O-intensive Minecraft operations.</li>
+</ul>
+</li>
+<li>
+<p><strong>RAM (16 GB):</strong></p>
+<ul>
+<li>Holds active game data in memory, allowing quick access to chunks, entities, and player states.</li>
+<li>With 16 GB, the server can easily handle multiple players and plugins/mods.</li>
+</ul>
+</li>
+<li>
+<p><strong>Improvement Ideas:</strong></p>
+<ul>
+<li>Upgrade to <strong>NVMe SSD</strong> for even faster speeds.</li>
+<li>Add <strong>RAID 1</strong> for redundancy and protection from data loss.</li>
+<li>Use a <strong>dedicated backup drive</strong> to keep world data safe and separate from main storage.</li>
+</ul>
+</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="-a2--network-systems">✅ A2 – Network Systems<a href="#-a2--network-systems" class="hash-link" aria-label="Direct link to ✅ A2 – Network Systems" title="Direct link to ✅ A2 – Network Systems">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="-a21--assigning-permissions">🔹 A2.1 – Assigning Permissions<a href="#-a21--assigning-permissions" class="hash-link" aria-label="Direct link to 🔹 A2.1 – Assigning Permissions" title="Direct link to 🔹 A2.1 – Assigning Permissions">​</a></h3>
