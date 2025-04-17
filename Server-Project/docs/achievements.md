@@ -13,14 +13,36 @@ This document outlines how the Minecraft Server Hosting and Networking Project a
 ## ✅ A1 - Computer Hardware
 
 ### 🔹 A1.1 – Internal Buses and System Communication
-- The server’s CPU (6 cores @ 2.1 GHz) uses internal buses (e.g., data, address, control buses) to communicate between the processor, RAM, and storage.
-- RAM running at 2400 MT/s benefits from a fast memory bus, which reduces latency when multiple players are connected to the Minecraft server.
-- Efficient data transfer between the CPU, RAM, and SATA SSD improves game responsiveness, world loading, and backup performance.
+Internal buses play a critical role in ensuring all parts of the computer can communicate effectively:
+
+- **Data Bus:** Transfers actual data between CPU, RAM, and storage. A wider data bus (like 64-bit) means more data can be moved at once. This affects Minecraft performance by allowing faster updates to the game state.
+
+- **Address Bus:** Sends memory addresses so the CPU knows where to read/write data. A server with a 64-bit address bus can use more memory—important for hosting multiple players and large worlds.
+
+- **Control Bus:** Carries control signals (like read/write commands). Keeps the timing and coordination of CPU and memory operations smooth, reducing lag during world saves or player movement.
+
+- **CPU-RAM Bus (Memory Bus):** The RAM in this server runs at 2400 MT/s, which supports fast chunk loading and entity tracking by enabling high-speed data transfers to/from memory.
+
+- **Storage Bus (SATA):** Connects the SSD to the motherboard. SATA III supports up to 6 Gb/s transfer speed—enough for solid performance during saves and backups.
+
+These internal buses ensure the server can react in real time, which is essential for smooth multiplayer gameplay.
 
 ### 🔹 A1.2 – Storage Devices for Server Needs
-- The server uses a 256 GB **SATA SSD**, chosen for its speed and reliability over traditional HDDs.
-- SSDs are essential for running Minecraft servers, reducing chunk loading times and enabling faster backups.
-- The storage choice supports high read/write speeds necessary for hosting multiple players and handling frequent file access without lag.
+Selecting the right storage affects how well the server can handle saving/loading game data:
+
+- **SSD (SATA, 256 GB):**
+  - Provides fast load times and quick access to world files.
+  - Large enough for moderate world sizes and multiple backups.
+  - More reliable and faster than HDDs, especially for I/O-intensive Minecraft operations.
+
+- **RAM (16 GB):**
+  - Holds active game data in memory, allowing quick access to chunks, entities, and player states.
+  - With 16 GB, the server can easily handle multiple players and plugins/mods.
+
+- **Improvement Ideas:**
+  - Upgrade to **NVMe SSD** for even faster speeds.
+  - Add **RAID 1** for redundancy and protection from data loss.
+  - Use a **dedicated backup drive** to keep world data safe and separate from main storage.
 
 ## ✅ A2 – Network Systems
 
